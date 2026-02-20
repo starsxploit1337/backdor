@@ -8,6 +8,7 @@
 </p>
 
 ---
+<img width="1896" height="937" alt="image" src="https://github.com/user-attachments/assets/9bfcff55-f278-46a7-979e-1a47c9a7eca6" />
 
 > ⚡ Panel Kontrol Server Berbasis PHP  
 > 🧪 Dibuat untuk Pengujian Lab & Pembelajaran Keamanan
