@@ -82,14 +82,6 @@ Sistem keamanan seperti:
 - Cloudflare
 - Apache ModSecurity
 
-dibuat untuk melindungi server.
-
-Project ini TIDAK:
-- Menyediakan teknik bypass
-- Menonaktifkan firewall
-- Melewati proteksi keamanan
-
-Belajar keamanan berarti memahami cara memperkuat sistem, bukan merusaknya.
 
 ---
 
