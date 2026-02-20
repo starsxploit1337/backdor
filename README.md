@@ -16,7 +16,7 @@
 ---
 
 <h3>USERNAME : 0xStars</h3>
-<h3></h3>PASSWORD : 0xPy</h3>
+<h3>PASSWORD : 0xPy</h3>
 
 
 # 🚨 PERINGATAN PENTING
